@@ -1,0 +1,108 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+#sr-gate {
+  display: table;
+  width: 100%;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  background: #2c3e50;
+}
+@media (max-width: 450px) {
+  #sr-gate {
+    display: block;
+  }
+}
+#sr-gate #sr-login,
+#sr-gate #sr-register {
+  display: none;
+  vertical-align: middle;
+}
+@media (max-width: 450px) {
+  #sr-gate #sr-login,
+  #sr-gate #sr-register {
+    display: block;
+    height: 100%;
+  }
+}
+#sr-gate #sr-login.visible,
+#sr-gate #sr-register.visible {
+  display: table-cell;
+}
+#sr-gate #sr-login form,
+#sr-gate #sr-register form {
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 450px;
+  background: #FFF;
+  border-radius: 3px;
+}
+@media (max-width: 450px) {
+  #sr-gate #sr-login form,
+  #sr-gate #sr-register form {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+#sr-gate #sr-login form .sr-gate-title,
+#sr-gate #sr-register form .sr-gate-title {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+#sr-gate #sr-login form label,
+#sr-gate #sr-register form label,
+#sr-gate #sr-login form input,
+#sr-gate #sr-register form input,
+#sr-gate #sr-login form a,
+#sr-gate #sr-register form a {
+  display: block;
+  font-size: 14px;
+}
+#sr-gate #sr-login form label,
+#sr-gate #sr-register form label {
+  margin: 0;
+  padding: 8px 0 6px;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+#sr-gate #sr-login form input[type="text"],
+#sr-gate #sr-register form input[type="text"],
+#sr-gate #sr-login form input[type="password"],
+#sr-gate #sr-register form input[type="password"] {
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+#sr-gate #sr-login form input[type="submit"],
+#sr-gate #sr-register form input[type="submit"] {
+  margin: 20px 0;
+  padding: 20px 0;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFF;
+  background: #3e5771;
+  border: none;
+  transition: all .3s ease;
+}
+#sr-gate #sr-login form input[type="submit"]:hover,
+#sr-gate #sr-register form input[type="submit"]:hover,
+#sr-gate #sr-login form input[type="submit"]:focus,
+#sr-gate #sr-register form input[type="submit"]:focus {
+  background: #4f6f8f;
+}
+#sr-gate #sr-login form .sr-gate-change,
+#sr-gate #sr-register form .sr-gate-change {
+  font-size: 14px;
+}
+#sr-gate #sr-register {
+  display: none;
+}
