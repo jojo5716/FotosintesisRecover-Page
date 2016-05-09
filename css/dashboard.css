@@ -1,0 +1,67 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+#sr-dashboard {
+  height: 100%;
+}
+#sr-dashboard #sr-menu {
+  float: left;
+  width: 300px;
+  height: 100%;
+  min-height: 500px;
+  color: #FFF;
+  background: #2c3e50;
+}
+#sr-dashboard #sr-menu #srm-logo-wrapper {
+  padding: 30px 30px 50px;
+  box-sizing: border-box;
+}
+#sr-dashboard #sr-menu #srm-logo-wrapper #srm-logo {
+  /* Temporal */
+
+  width: 100%;
+  height: 50px;
+  background: #3e5771;
+}
+#sr-dashboard #sr-menu #srm-projects-list #srm-title {
+  display: block;
+  margin-bottom: 15px;
+  padding: 0 30px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #507192;
+}
+#sr-dashboard #sr-menu #srm-projects-list #srm-projects {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#sr-dashboard #sr-menu #srm-projects-list #srm-projects li {
+  padding: 10px 30px;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+  color: #8aa4be;
+  cursor: pointer;
+}
+#sr-dashboard #sr-menu #srm-projects-list #srm-projects li:hover,
+#sr-dashboard #sr-menu #srm-projects-list #srm-projects li:focus {
+  padding-left: 27px;
+  background: #3e5771;
+  border-left: 3px solid #080b0e;
+}
+#sr-dashboard #sr-content {
+  float: left;
+  width: calc(100% - 300px);
+  height: 100%;
+}
+#sr-dashboard #sr-content #src-header {
+  height: 64px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+#sr-dashboard #sr-content #src-content {
+  height: calc(100% - 65px);
+  overflow: auto;
+}

@@ -1,0 +1,115 @@
+@colorCorporativo: #2c3e50;
+
+.clearfix() {
+    *zoom: 1;
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+html, body{
+    margin: 0;
+    height: 100%;
+}
+
+#sr-dashboard{
+    height: 100%;
+
+    #sr-menu{
+        float: left;
+
+        width: 300px;
+        height: 100%;
+        min-height: 500px;
+
+        color: #FFF;
+        background: @colorCorporativo;
+
+        #srm-logo-wrapper{
+
+            padding: 30px 30px 50px;
+            box-sizing: border-box;
+
+            #srm-logo{
+                /* Temporal */
+
+                width: 100%;
+                height: 50px;
+
+                background: lighten(@colorCorporativo, 10%);
+            }
+        }
+
+        #srm-projects-list{
+
+            #srm-title{
+                display: block;
+                margin-bottom: 15px;
+                padding: 0 30px;
+
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 600;
+                letter-spacing: 1px;
+
+                color: lighten(@colorCorporativo, 20%);
+            }
+
+            #srm-projects{
+                margin: 0;
+                padding: 0;
+
+                list-style-type: none;
+
+                li{
+                    padding: 10px 30px;
+
+                    font-family: 'Open Sans', sans-serif;
+                    letter-spacing: 1px;
+
+                    color: lighten(@colorCorporativo, 40%);
+
+                    cursor: pointer;
+
+                    &:hover, &:focus{
+                        padding-left: 27px;
+
+                        background: lighten(@colorCorporativo, 10%);
+
+                        border-left: 3px solid darken(@colorCorporativo, 20%);
+                    }
+                }
+            }
+        }
+    }
+
+    #sr-content{
+        float: left;
+        width: ~"calc(100% - 300px)";
+        height: 100%;
+
+        #src-header{
+            height: 64px;
+
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+            #srch-menu-opener{
+
+            }
+
+            #srch-settings{
+
+            }
+        }
+
+        #src-content{
+            height: ~"calc(100% - 65px)";
+
+            overflow: auto;
+        }
+    }
+}
