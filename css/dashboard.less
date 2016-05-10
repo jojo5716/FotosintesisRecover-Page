@@ -69,7 +69,7 @@ html, body{
 
                 height: ~"calc(100% - 40px)";
 
-                overflow-y: scroll;
+                overflow-y: auto;
 
                 list-style-type: none;
 
@@ -115,11 +115,77 @@ html, body{
         }
 
         #src-content{
+            padding: 25px;
+            box-sizing: border-box;
+
             height: ~"calc(100% - 65px)";
 
             background: #EEE;
 
-            overflow: auto;
+            #src-users-list{
+                width: 100%;
+                height: 100%;
+
+                background: #FFF;
+
+                border: 1px solid rgba(0, 0, 0, 0.3);
+
+                overflow-x: hidden;
+
+                #src-table-header{
+                    padding-right: 20px;
+                    width: ~"calc(100% + 5px)";
+
+                    color: #FFF;
+                    background: @colorCorporativo;
+
+                    span{
+                        border-right: 1px solid rgba(255, 255, 255, 0.3);
+                    }
+                }
+
+                .src-users-list-row{
+
+                    .clearfix();
+
+                    span{
+                        display: block;
+                        float: left;
+
+                        padding: 15px;
+                        box-sizing: border-box;
+
+                        width: 33.33%;
+
+                        font-family: 'Open Sans', sans-serif;
+                        font-size: 14px;
+                        font-weight: 600;
+                        letter-spacing: 1px;
+
+                        border-right: 1px solid rgba(0, 0, 0, 0.3);
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+                    }
+                }
+
+                #src-table-content{
+                    padding-right: 20px;
+
+                    width: ~"calc(100% + 20px)";
+                    height: ~"calc(100% - 50px)";
+
+                    overflow-y: auto;
+
+                    .src-users-list-row{
+                        transition: all .3s ease;
+
+                        cursor: pointer;
+
+                        &:hover, &:focus{
+                            background: lighten(@colorCorporativo, 70%);
+                        }
+                    }
+                }
+            }
         }
     }
 }
